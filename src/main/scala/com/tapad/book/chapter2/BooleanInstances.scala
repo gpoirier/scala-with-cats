@@ -11,4 +11,8 @@ object BooleanInstances {
     def empty: Boolean = false
     def combine(x: Boolean, y: Boolean): Boolean = x || y
   }
+  object Xor extends Monoid[Boolean] {
+    def empty: Boolean = false
+    def combine(x: Boolean, y: Boolean): Boolean = x != y
+  }
 }

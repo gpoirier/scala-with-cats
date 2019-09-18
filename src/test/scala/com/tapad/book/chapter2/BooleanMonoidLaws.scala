@@ -9,4 +9,5 @@ import org.typelevel.discipline.scalatest.Discipline
 class BooleanMonoidLaws extends FunSuite with Discipline {
   checkAll("And.MonoidLaws",  MonoidTests[Boolean](BooleanInstances.And).monoid)
   checkAll("Or.MonoidLaws",  MonoidTests[Boolean](BooleanInstances.Or).monoid)
+  checkAll("Xor.MonoidLaws",  MonoidTests[Boolean](BooleanInstances.Xor).monoid)
 }

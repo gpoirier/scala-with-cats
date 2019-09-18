@@ -3,7 +3,6 @@ package com.tapad.book.chapter2
 import cats.Monoid
 
 case class Order(totalCost: Double, quantity: Double)
-case class Order1(totalCost: Double, quantity: Double)
 
 object Order {
   implicit object OrderMonoid extends Monoid[Order] {
