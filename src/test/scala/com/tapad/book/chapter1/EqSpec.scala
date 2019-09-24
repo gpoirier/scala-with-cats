@@ -26,13 +26,13 @@ object Compare {
   def testSame: Boolean = {
     val cat1 = Cat("Felix", 5, "gray")
     val cat2 = Cat("Felix", 5, "gray")
-    ((cat1 === cat2) == true) && ((cat1 =!= cat2) == false)
+    (cat1 === cat2) && !(cat1 =!= cat2)
   }
 
   def testDifferent: Boolean = {
     val cat1 = Cat("Felix", 5, "gray")
     val cat2 = Cat("Felix", 6, "gray")
-    ((cat1 === cat2) == false) && ((cat1 =!= cat2) == true)
+    !(cat1 === cat2) && (cat1 =!= cat2)
   }
 
   def fromBook: Boolean = {
@@ -41,6 +41,6 @@ object Compare {
     val optionCat1 = Option(cat1)
     val optionCat2 = Option.empty[Cat]
 
-    (cat1 =!= cat2) == true && (optionCat1 =!= optionCat2) == true
+    (cat1 =!= cat2) && (optionCat1 =!= optionCat2)
   }
 }
