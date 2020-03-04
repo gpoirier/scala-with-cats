@@ -1,11 +1,12 @@
 package com.tapad.book.chapter1
 
-import org.scalatest._
+import org.scalatest.wordspec._
+import org.scalatest.matchers.should.Matchers
 
 import cats._
 import cats.implicits._
 
-class ShowSpec extends WordSpec with Matchers {
+class ShowSpec extends AnyWordSpec with Matchers {
   "Show" should {
     "format cats" in {
       val cat = Cat("Felix", 5, "gray")

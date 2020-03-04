@@ -1,7 +1,7 @@
 name := "scala-with-cats"
 version := "0.0.1-SNAPSHOT"
 
-scalaVersion := "2.12.9"
+scalaVersion := "2.12.10"
 
 scalacOptions ++= Seq(
   "-encoding", "UTF-8",   // source files are in UTF-8
@@ -14,11 +14,13 @@ scalacOptions ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "org.typelevel" %% "cats-core" % "1.4.0",
+  "org.typelevel" %% "cats-core" % "2.0.0",
+  "org.typelevel" %% "cats-effect" % "2.0.0",
+  "org.typelevel" %% "cats-laws" % "2.0.0" % Test,
+  "org.typelevel" %% "discipline-scalatest" % "1.0.0-RC1",
   "org.scalatest" %% "scalatest" % "3.0.8" % Test,
-  "org.typelevel" %% "cats-laws" % "1.1.0" % Test,
-  "com.github.alexarchambault" %% "scalacheck-shapeless_1.13" % "1.1.6" % Test,
-  "org.scalacheck" %% "scalacheck" % "1.14.0" % Test
+  "com.github.alexarchambault" %% "scalacheck-shapeless_1.13" % "1.1.8" % Test,
+  "org.scalacheck" %% "scalacheck" % "1.14.2" % Test
 )
 
-addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.9.3")
+addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.9.10")

@@ -1,8 +1,9 @@
 package com.tapad.book.chapter3
 
-import org.scalatest._
+import org.scalatest.wordspec._
+import org.scalatest.matchers.should.Matchers
 
-class PrintableSpec extends WordSpec with Matchers {
+class PrintableSpec extends AnyWordSpec with Matchers {
   "Printable" should {
     "format strings" in {
       Printable[String].format("hello") should be ("\"hello\"")

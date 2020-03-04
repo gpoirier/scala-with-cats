@@ -1,11 +1,12 @@
 package com.tapad.book.chapter2
 
-import org.scalatest._
+import org.scalatest.wordspec._
+import org.scalatest.matchers.should.Matchers
 
 import cats.instances.int._
 import cats.instances.option._
 
-class SuperAdderSpec extends WordSpec with Matchers {
+class SuperAdderSpec extends AnyWordSpec with Matchers {
   "IntSuperAdd" should {
     "add numbers" in {
       IntSuperAdder.add(List(1, 2, 3)) should be (6)

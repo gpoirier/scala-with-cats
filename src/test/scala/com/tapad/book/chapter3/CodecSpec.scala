@@ -1,8 +1,9 @@
 package com.tapad.book.chapter3
 
-import org.scalatest._
+import org.scalatest.wordspec._
+import org.scalatest.matchers.should.Matchers
 
-class CodecSpec extends WordSpec with Matchers {
+class CodecSpec extends AnyWordSpec with Matchers {
   "Codec" should {
     "encode strings" in {
       Codec.encode("hello") should be ("hello")

@@ -1,9 +1,10 @@
 package com.tapad.book.chapter1
 
-import org.scalatest.{WordSpec, Matchers}
+import org.scalatest.wordspec._
+import org.scalatest.matchers.should.Matchers
 import Compare._
 
-class EqSpec extends WordSpec with Matchers {
+class EqSpec extends AnyWordSpec with Matchers {
   "Eq" should {
     "return true for the same cat" in {
       testSame shouldBe true

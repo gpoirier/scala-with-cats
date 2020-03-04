@@ -4,10 +4,10 @@ import cats.implicits._
 import cats.laws.discipline.FunctorTests
 
 import org.scalacheck._
-import org.scalatest.FunSuite
+import org.scalatest.funsuite.AnyFunSuite
 import org.typelevel.discipline.scalatest.Discipline
 
-class TreeFunctorLaws extends FunSuite with Discipline {
+class TreeFunctorLaws extends AnyFunSuite with Discipline {
   def randomTree[A](implicit gen: Gen[A]): Gen[Tree[A]] = {
     val genLeaf: Gen[Tree[A]] =
       for {
